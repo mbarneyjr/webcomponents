@@ -1,0 +1,8 @@
+*.local
+*.local.*
+CHANGELOG.md
+.github
+.changeset
+.editorconfig
+tsconfig.json
+example

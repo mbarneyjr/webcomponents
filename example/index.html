@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example Site</title>
+    <meta name="description" content="An example site to showcase my webcomponents" />
+    <script
+      async
+      src="https://ga.jspm.io/npm:es-module-shims@1.8.0/dist/es-module-shims.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@mbarneyjr/webcomponents": "../src/index.mjs",
+          "lit": "https://ga.jspm.io/npm:lit@3.0.0/index.js"
+        },
+        "scopes": {
+          "https://ga.jspm.io/": {
+            "@lit/reactive-element": "https://ga.jspm.io/npm:@lit/reactive-element@2.0.1/development/reactive-element.js",
+            "lit-element/lit-element.js": "https://ga.jspm.io/npm:lit-element@4.0.0/development/lit-element.js",
+            "lit-html": "https://ga.jspm.io/npm:lit-html@3.0.2/development/lit-html.js",
+            "lit-html/is-server.js": "https://ga.jspm.io/npm:lit-html@3.0.2/development/is-server.js"
+          }
+        }
+      }
+    </script>
+    <script type="module" blocking="render" src="index.mjs"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav-bar breakpoint="720px">
+        <nav-bar-item slot="left">Example Site</nav-bar-item>
+        <nav-bar-item slot="right" href="/example">Link</nav-bar-item>
+        <nav-bar-item slot="right" href="/example">Link</nav-bar-item>
+        <nav-bar-item slot="right" href="/example">Link</nav-bar-item>
+      </nav-bar>
+    </header>
+    <main>
+      <h1>Hello, world!</h1>
+    </main>
+  </body>
+</html>

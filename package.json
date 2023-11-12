@@ -1,0 +1,28 @@
+{
+  "name": "@mbarneyjr/webcomponents",
+  "description": "personal web-components library",
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [],
+  "author": "Michael Barney",
+  "license": "ISC",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./components/*/index.mjs": "./src/components/*/index.mjs"
+  },
+  "scripts": {
+    "types": "tsc",
+    "example": "live-server . --open=example",
+    "change": "changeset add",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "dependencies": {
+    "lit": "^3.0.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "jspm": "^3.1.0",
+    "live-server": "^1.2.2"
+  }
+}
