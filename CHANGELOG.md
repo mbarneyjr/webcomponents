@@ -1,5 +1,16 @@
 # @mbarneyjr/webcomponents
 
+## 2.0.0
+
+### Major Changes
+
+- 581b726: removes nav-bar-item element
+
+### Minor Changes
+
+- 3cf0d02: add stylesheet
+- b785aff: add content-card element
+
 ## 1.0.0
 
 ### Major Changes
