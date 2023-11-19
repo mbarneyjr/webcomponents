@@ -57,7 +57,6 @@ export class NavBar extends LitElement {
       /* when shown, display will be flex */
       flex-direction: column;
       justify-content: center;
-      padding: 1rem;
     }
     .navbar-toggle span {
       display: block;
@@ -114,11 +113,11 @@ export class NavBar extends LitElement {
           }
         }
       </style>
-      <nav class="navbar" part="navbar">
+      <nav class="navbar" part="nav-bar">
         <div class="left">
           <slot name="left"></slot>
         </div>
-        <button class="navbar-toggle" @click="${() => this.navBarToggle()}" part="toggle">
+        <button class="navbar-toggle" aria-label="nav-bar toggle" @click="${() => this.navBarToggle()}" part="toggle">
           <span part="toggle-line"></span>
           <span part="toggle-line"></span>
           <span part="toggle-line"></span>
