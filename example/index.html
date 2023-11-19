@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8" />
@@ -28,26 +28,136 @@
       }
     </script>
     <script type="module" blocking="render" src="index.mjs"></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial;
+    <!-- Use unpgk in production -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@mbarneyjr/webcomponents@VERSION/src/styles/index.css" /> -->
+    <link rel="stylesheet" href="../src/styles/index.css" />
+    <script>
+      document.documentElement.setAttribute('data-theme', 'light');
+      function toggleTheme() {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
       }
-    </style>
+    </script>
   </head>
 
   <body>
     <header>
       <nav-bar breakpoint="720px">
-        <nav-bar-item slot="left">Example Site</nav-bar-item>
-        <nav-bar-item slot="right" href="/example">Link</nav-bar-item>
-        <nav-bar-item slot="right" href="/example">Link</nav-bar-item>
-        <nav-bar-item slot="right" href="/example">Link</nav-bar-item>
+        <p slot="left">Example Site</p>
+        <button primary slot="left" onclick="toggleTheme()">Switch Theme</button>
+        <a slot="right" href="/example" active>Link</a>
+        <a slot="right" href="/example">Link</a>
+        <a slot="right" href="/example">Link</a>
       </nav-bar>
     </header>
     <main>
-      <h1>Hello, world!</h1>
+      <section>
+        <div class="row-1">
+          <h1>
+            AN EXAMPLE SITE.<br />
+            WEB COMPONENTS ARE GREAT.
+          </h1>
+        </div>
+      </section>
+      <section style="background-color: rgba(20, 50, 150, 0.1)">
+        <div class="flex min-width-children-300">
+          <content-card style="min-width: 300px">
+            <h2>Buttons inside of a card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <div class="flex">
+              <button primary>Primary</button>
+              <button>Default</button>
+              <button disabled>Disabled</button>
+              <button danger>Danger</button>
+            </div>
+          </content-card>
+          <div style="min-width: 300px">
+            <h2>These are buttons!</h2>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          </div>
+          <div style="min-width: 300px">
+            <h2>These are buttons!</h2>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          </div>
+        </div>
+      </section>
+      <section style="background-color: rgba(20, 150, 50, 0.1)">
+        <div class="flex">
+          <content-card accent style="min-width: 100%">
+            <h2>Buttons inside of an accent card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <button primary>Primary</button>
+            <button>Default</button>
+            <button disabled>Disabled</button>
+            <button danger>Danger</button>
+          </content-card>
+          <content-card primary style="min-width: 300px">
+            <h2>Buttons inside of a primary card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <button primary>Primary</button>
+            <button>Default</button>
+            <button disabled>Disabled</button>
+            <button danger>Danger</button>
+          </content-card>
+          <content-card secondary style="min-width: 300px">
+            <h2>Buttons inside of a secondary card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <button primary>Primary</button>
+            <button>Default</button>
+            <button disabled>Disabled</button>
+            <button danger>Danger</button>
+          </content-card>
+          <content-card secondary style="min-width: 300px">
+            <h2>Buttons inside of a secondary card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <button primary>Primary</button>
+            <button>Default</button>
+            <button disabled>Disabled</button>
+            <button danger>Danger</button>
+          </content-card>
+          <content-card secondary style="min-width: 300px">
+            <h2>Buttons inside of a secondary card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <button primary>Primary</button>
+            <button>Default</button>
+            <button disabled>Disabled</button>
+            <button danger>Danger</button>
+          </content-card>
+          <content-card secondary style="min-width: 300px">
+            <h2>Buttons inside of a secondary card</h2>
+            <p>
+              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </p>
+            <button primary>Primary</button>
+            <button>Default</button>
+            <button disabled>Disabled</button>
+            <button danger>Danger</button>
+          </content-card>
+        </div>
+      </section>
     </main>
   </body>
 </html>
