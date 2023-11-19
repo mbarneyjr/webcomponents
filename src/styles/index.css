@@ -1,0 +1,258 @@
+/* global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  line-height: 1.5;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration: none;
+  color: currentColor;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* theme */
+:root[data-theme='light'] {
+  --danger: #e82b35;
+}
+:root[data-theme='dark'] {
+  --danger: #d10e1d;
+}
+:root[data-theme='light'] {
+  --text: #061128;
+  --background: #d3e0f8;
+  --background2: #b3b0e8;
+  --primary: #1c48e6;
+  --secondary: #137fa2;
+  --accent: #1b9639;
+}
+:root[data-theme='dark'] {
+  --text: #d7e2f9;
+  --background: #07142c;
+  --background2: #17245c;
+  --primary: #4f91f8;
+  --secondary: #26cae9;
+  --accent: #41db6d;
+}
+
+/* layout */
+nav-bar::part(nav-bar),
+section > * {
+  max-width: 1366px;
+  margin: auto;
+}
+
+main {
+  margin: 0;
+}
+
+section {
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.flex > * {
+  flex: 1 0 0;
+}
+
+/* style */
+nav-bar::part(toggle) {
+  padding: 1rem;
+}
+nav-bar::part(toggle-line) {
+  background-color: var(--background);
+}
+nav-bar * {
+  padding: 1rem;
+  margin-top: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 4px -2px var(--text);
+}
+button:hover {
+  transform: scale(1.05);
+}
+button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+}
+button:disabled {
+  transform: none;
+  cursor: not-allowed;
+}
+nav-bar button,
+nav-bar button:not([disabled]):hover,
+nav-bar button:not([disabled]):active {
+  margin: auto;
+}
+
+content-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 8px -2px var(--text);
+}
+content-card[secondary] button[disabled] {
+  box-shadow: 0px 0px 0px 2px inset var(--background);
+}
+
+/* colors */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  background: linear-gradient(to bottom, var(--background), var(--background2));
+}
+nav-bar,
+nav-bar a {
+  color: var(--background);
+  background-color: var(--text);
+}
+nav-bar a:hover {
+  background-color: var(--background);
+  color: var(--text);
+}
+nav-bar *[active] {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+content-card[accent] {
+  background-color: var(--accent);
+  color: var(--background);
+}
+content-card[primary] {
+  background-color: var(--primary);
+  color: var(--background);
+}
+content-card[secondary] button:not([disabled]):not([primary]):not([danger]) {
+  background-color: var(--background);
+  color: var(--secondary);
+}
+content-card[primary] button[primary] {
+  background-color: var(--background);
+  color: var(--primary);
+}
+content-card[secondary] {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+
+button {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+button[primary] {
+  background-color: var(--primary);
+  color: var(--background);
+}
+button[danger] {
+  background-color: var(--danger);
+}
+button:disabled {
+  box-shadow: 0px 0px 0px 2px inset var(--secondary);
+  background-color: transparent;
+  color: inherit;
+}
