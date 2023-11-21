@@ -31,24 +31,13 @@
     <!-- Use unpgk in production -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/@mbarneyjr/webcomponents@VERSION/src/styles/index.css" /> -->
     <link rel="stylesheet" href="../src/styles/index.css" />
-    <script>
-      document.documentElement.setAttribute('data-theme', 'light');
-      function toggleTheme() {
-        const theme = document.documentElement.getAttribute('data-theme');
-        if (theme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
-      }
-    </script>
   </head>
 
   <body>
     <header>
       <nav-bar breakpoint="720px">
         <p slot="left">Example Site</p>
-        <button primary slot="left" onclick="toggleTheme()">Switch Theme</button>
+        <button primary slot="left" id="theme-toggle">Switch Theme</button>
         <a slot="right" href="/example" active>Link</a>
         <a slot="right" href="/example">Link</a>
         <a slot="right" href="/example">Link</a>

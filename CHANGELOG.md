@@ -1,5 +1,12 @@
 # @mbarneyjr/webcomponents
 
+## 2.1.0
+
+### Minor Changes
+
+- add theme util
+- add margin: 0 to global reset
+
 ## 2.0.0
 
 ### Major Changes
