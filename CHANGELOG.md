@@ -1,5 +1,11 @@
 # @mbarneyjr/webcomponents
 
+## 2.1.1
+
+### Patch Changes
+
+- add horizontal padding to section elements
+
 ## 2.1.0
 
 ### Minor Changes

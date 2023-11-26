@@ -118,6 +118,9 @@ section > * {
   max-width: 1366px;
   margin: auto;
 }
+section > * {
+  padding: 0 1rem;
+}
 
 section {
   padding: 0.5rem 0;
