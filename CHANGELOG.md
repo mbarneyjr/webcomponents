@@ -1,5 +1,11 @@
 # @mbarneyjr/webcomponents
 
+## 2.2.0
+
+### Minor Changes
+
+- add styles for form elements
+
 ## 2.1.1
 
 ### Patch Changes

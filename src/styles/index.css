@@ -43,6 +43,10 @@ h2,
 h3,
 h4,
 button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+input::file-selector-button,
 input,
 label {
   line-height: 1.1;
@@ -54,12 +58,18 @@ h3,
 h4 {
   text-wrap: balance;
 }
-button {
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+input::file-selector-button {
   border: none;
-  background: none;
+  background: inherit;
+  color: inherit;
   padding: 0;
   margin: 0;
   font: inherit;
+  font-size: inherit;
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -75,6 +85,10 @@ picture {
 /* Inherit fonts for inputs and buttons */
 input,
 button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+input::file-selector-button,
 textarea,
 select {
   font: inherit;
@@ -135,7 +149,7 @@ section {
 }
 
 .flex > * {
-  flex: 1 0 0;
+  flex: 1 1 min-content;
 }
 
 /* style */
@@ -168,15 +182,31 @@ h3 {
   font-size: 1.75rem;
 }
 
-button {
+button,
+input[type='submit'],
+input[type='button'],
+input[type='reset'],
+input::file-selector-button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 0px 1px 4px -2px var(--text);
 }
-button:hover {
+input::file-selector-button {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  margin-right: 0.5rem;
+}
+button:hover,
+input[type='submit']:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input::file-selector-button:hover {
   transform: scale(1.05);
 }
-button:active {
+button:active,
+input[type='submit']:active,
+input[type='button']:active,
+input[type='reset']:active,
+input::file-selector-button:active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
 }
@@ -188,6 +218,28 @@ nav-bar button,
 nav-bar button:not([disabled]):hover,
 nav-bar button:not([disabled]):active {
   margin: auto;
+}
+
+input[type='file'] {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 2px 2px inset var(--secondary);
+  background-color: transparent;
+  color: inherit;
+}
+/* input[type='button'], */
+input[type='number'],
+input[type='password'],
+input[type='email'],
+input[type='reset'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'] {
+  display: inline;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 3px 1px inset rgb(from var(--secondary) r g b / 0.5);
+  padding: 0.5rem 1rem;
 }
 
 content-card {
@@ -240,19 +292,33 @@ content-card[secondary] {
   color: var(--background);
 }
 
-button {
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   background-color: var(--secondary);
   color: var(--background);
 }
-button[primary] {
+button[primary],
+input[primary][type='reset'],
+input[primary][type='submit'],
+input[primary][type='button'] {
   background-color: var(--primary);
   color: var(--background);
 }
-button[danger] {
+button[danger],
+input[danger][type='reset'],
+input[danger][type='submit'],
+input[danger][type='button'] {
   background-color: var(--danger);
 }
 button:disabled {
   box-shadow: 0px 0px 0px 2px inset var(--secondary);
   background-color: transparent;
   color: inherit;
+}
+
+input::file-selector-button {
+  background-color: var(--secondary);
+  color: var(--background);
 }
