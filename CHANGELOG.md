@@ -1,5 +1,11 @@
 # @mbarneyjr/webcomponents
 
+## 2.2.1
+
+### Patch Changes
+
+- separate flex and flex-stretch
+
 ## 2.2.0
 
 ### Minor Changes

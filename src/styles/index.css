@@ -148,8 +148,12 @@ section {
   gap: 1rem;
 }
 
-.flex > * {
+.flex-stretch > * {
   flex: 1 1 min-content;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 /* style */
