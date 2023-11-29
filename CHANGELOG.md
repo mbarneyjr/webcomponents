@@ -1,5 +1,11 @@
 # @mbarneyjr/webcomponents
 
+## 2.3.0
+
+### Minor Changes
+
+- add content-pill component
+
 ## 2.2.1
 
 ### Patch Changes

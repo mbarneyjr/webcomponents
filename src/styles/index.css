@@ -255,6 +255,12 @@ content-card[secondary] button[disabled] {
   box-shadow: 0px 0px 0px 2px inset var(--background);
 }
 
+content-pill {
+  padding: 0.25rem 0.5rem;
+  border-radius: 100rem;
+  box-shadow: 0px 1px 8px -2px var(--text);
+}
+
 /* colors */
 body {
   background-color: var(--background);
@@ -293,6 +299,23 @@ content-card[primary] button[primary] {
 }
 content-card[secondary] {
   background-color: var(--secondary);
+  color: var(--background);
+}
+
+content-pill[primary] {
+  background-color: var(--primary);
+  color: var(--background);
+}
+content-pill[secondary] {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+content-pill[accent] {
+  background-color: var(--accent);
+  color: var(--background);
+}
+content-pill[danger] {
+  background-color: var(--danger);
   color: var(--background);
 }
 
